@@ -1,0 +1,31 @@
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+\lstdefinelanguage{Python}{
+  keywords={class, def, lambda, return, is, not, in, and, or, if, elif, else, for, while, import, from, as, break, continue, try, except, finally, raise, assert, True, False, with, yield},
+  keywordstyle=\color{red}\bfseries,
+  ndkeywords={self, abs, all, any, bin, bool, dir, range, exp, len, print, open, format, int, float, str, repr, isinstance, type, iter, next, sum, max, min, pow, sorted, zip, list, tuple, set, dict, map, frozenset, hash, filter, eval, np},
+  ndkeywordstyle=\color{blue}\bfseries,
+  identifierstyle=\color{darkgray},
+  sensitive=false,
+  comment=[l]{\#},
+  morecomment=[s]{"""}{"""},
+  commentstyle=\color{brown}\ttfamily,
+  stringstyle=\color{olive}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+   language=Python,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   tabsize=4,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}

@@ -1,0 +1,73 @@
+\usepackage{amsmath}
+\usepackage{amsfonts, amssymb}
+\usepackage{amsthm} % for proof environment
+\usepackage{mathtools} % for paired delimiter
+\usepackage{amssymb} % \because and \therefore
+\usepackage{booktabs} % \toprule, \midrule, \bottomrule
+
+% Proof environments
+\newtheorem{theorem}[section]{Theorem}
+\newtheorem{definition}[section]{Definition}
+\newtheorem{corollary}[section]{Corrolary}
+\newtheorem{lemma}[section]{Lemma}
+\newtheorem{claim}[section]{Claim}
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\suchThat}{\text{, such that }}
+\newcommand{\where}{\text{, where }}
+\newcommand{\tand}{\text{ and }}
+\newcommand{\tor}{\text{ or }}
+\newcommand{\Let}{\text{Let }}
+
+% ceil and floor
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+% optimiztion
+\newcommand{\argmin}{\mathop{\rm arg min}\limits}
+\newcommand{\argmax}{\mathop{\rm arg max}\limits}
+\newcommand{\sign}{\text{sign}}
+
+% set theory
+\DeclarePairedDelimiter{\set}{\{}{\}}
+\newcommand{\ind}[1]{\mathbf{1}\{~#1~\}}  % Indicator function
+\renewcommand{\c}{^{\sf c}}
+
+% fraction
+\newcommand{\rec}[1]{\frac{1}{#1}}
+\newcommand{\half}[1]{\frac{#1}{2}}
+
+% two cases
+\newcommand{\twocases}[4]{\begin{cases}#1&#2\\#3&#4\end{cases}}
+\newcommand{\otherwise}{\text{otherwise}}
+
+% calculus
+\newcommand{\diff}[2]{\dfrac{\text{d}}{\text{d}#2} #1}
+\newcommand{\pdiff}[2]{\dfrac{\partial}{\partial{#2}} #1}
+\newcommand{\ppdiff}[3]{\dfrac{\partial^2 #1}{\partial{#2}\partial{#3}}}
+\newcommand{\D}{~\textrm{d}}
+
+% Scientific notations
+\newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+
+% Statistical learning
+\newcommand{\yhat}{\hat{Y}}
+\DeclarePairedDelimiter{\vect}{\langle}{\rangle}
+\newcommand{\idx}[1]{^{(#1)}} % for the index into sample
+
+% commonly used number sets
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Rational}{\mathbb{Q}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Integer}{\mathbb{Z}}
+
+% linear algebra
+\newcommand{\T}{^{\sf T}}
+\newcommand{\diag}{\text{diag}}
+\newcommand{\tr}{\text{tr}}
+\newcommand{\norm}[2][]{\lVert#2\rVert_{#1}}
+\newcommand{\innter}[1]{{#1}\T #1}
+\newcommand{\outter}[1]{#1 {#1}\T}
+\newcommand{\inv}[1]{{#1}^{-1}}
+\newcommand{\pinv}[1]{{#1}^+}
