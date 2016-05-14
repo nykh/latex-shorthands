@@ -1,7 +1,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts, amssymb}
 \usepackage{amsthm} % for proof environment
-\usepackage{mathtools} % for paired delimiter
+\usepackage{mathtools} % for paired delimiter and DeclareMathOperator
 \usepackage{amssymb} % \because and \therefore
 \usepackage{booktabs} % \toprule, \midrule, \bottomrule
 
@@ -24,9 +24,9 @@
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 
 % optimiztion
-\newcommand{\argmin}{\mathop{\rm arg min}\limits}
-\newcommand{\argmax}{\mathop{\rm arg max}\limits}
-\newcommand{\sign}{\text{sign}}
+\DeclareMathOperator*{\argmin}{arg min}
+\DeclareMathOperator*{\argmax}{arg max}
+\DeclareMathOperator{\sign}{sign}
 
 % set theory
 \DeclarePairedDelimiter{\set}{\{}{\}}
@@ -42,10 +42,12 @@
 \newcommand{\otherwise}{\text{otherwise}}
 
 % calculus
-\newcommand{\diff}[2]{\dfrac{\text{d}}{\text{d}#2} #1}
-\newcommand{\pdiff}[2]{\dfrac{\partial}{\partial{#2}} #1}
-\newcommand{\ppdiff}[3]{\dfrac{\partial^2 #1}{\partial{#2}\partial{#3}}}
 \newcommand{\D}{~\textrm{d}}
+\newcommand{\diff}[2]{\dfrac{\text{d}}{\text{d}#2} #1}
+\newcommand{\diffs}[2]{\dfrac{\text{d}#1}{\text{d}#2}}
+\newcommand{\pdiff}[2]{\dfrac{\partial}{\partial{#2}} #1}
+\newcommand{\pdiffs}[2]{\dfrac{\partial　#1}{\partial{#2}}}
+\newcommand{\ppdiff}[3]{\dfrac{\partial^2 #1}{\partial{#2}\partial{#3}}}
 
 % Scientific notations
 \newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}
@@ -67,7 +69,7 @@
 \newcommand{\diag}{\text{diag}}
 \newcommand{\tr}{\text{tr}}
 \newcommand{\norm}[2][]{\lVert#2\rVert_{#1}}
-\newcommand{\innter}[1]{{#1}\T #1}
+\newcommand{\inner}[1]{{#1}\T #1}
 \newcommand{\outter}[1]{#1 {#1}\T}
 \newcommand{\inv}[1]{{#1}^{-1}}
 \newcommand{\pinv}[1]{{#1}^+}
