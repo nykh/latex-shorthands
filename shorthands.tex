@@ -14,7 +14,7 @@
 
 \renewcommand{\qedsymbol}{$\blacksquare$}
 \newcommand{\suchThat}{\text{, such that }}
-\newcommand{\where}{\text{, where }}
+\newcommand{\where}[1]{\text{, where #1}}
 \newcommand{\tand}{\text{ and }}
 \newcommand{\tor}{\text{ or }}
 \newcommand{\Let}{\text{Let }}
@@ -30,6 +30,7 @@
 
 % set theory
 \DeclarePairedDelimiter{\set}{\{}{\}}
+\DeclarePairedDelimiter{\Set}{\bigg\{}{\bigg\}}
 \newcommand{\ind}[1]{\mathbf{1}\{~#1~\}}  % Indicator function
 \renewcommand{\c}{^{\sf c}}
 
@@ -54,22 +55,30 @@
 
 % Statistical learning
 \newcommand{\yhat}{\hat{Y}}
-\DeclarePairedDelimiter{\vect}{\langle}{\rangle}
+\DeclarePairedDelimiter{\dataset}{\langle}{\rangle}
 \newcommand{\idx}[1]{^{(#1)}} % for the index into sample
+\DeclareMathOperator{\softmax}{softmax}
 
 % commonly used number sets
 \newcommand{\Real}{\mathbb{R}}
 \newcommand{\Nat}{\mathbb{N}}
 \newcommand{\Rational}{\mathbb{Q}}
-\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Compwlex}{\mathbb{C}}
 \newcommand{\Integer}{\mathbb{Z}}
 
 % linear algebra
 \newcommand{\T}{^{\sf T}}
-\newcommand{\diag}{\text{diag}}
-\newcommand{\tr}{\text{tr}}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
 \newcommand{\norm}[2][]{\lVert#2\rVert_{#1}}
 \newcommand{\inner}[1]{{#1}\T #1}
 \newcommand{\outter}[1]{#1 {#1}\T}
 \newcommand{\inv}[1]{{#1}^{-1}}
 \newcommand{\pinv}[1]{{#1}^+}
+
+\newcommand{\quadratic}[2]{{#1}\T #2 #1}
+\newcommand{\vect}[1]{\left(\begin{matrix}#1\end{matrix}\right)}
+\newcommand{\mat}[1]{\left[\begin{matrix}#1\end{matrix}\right]}
+
+% big O notation
+\DeclareMathOperator{\bigO}{\mathcal{O}}

@@ -1,11 +1,16 @@
+\usepackage{mathtools} % for paired delimiter and DeclareMathOperator
+
 % Events
 \renewcommand{\c}{^{\rm c}}
 
+% probability
+\DeclareMathOperator{\prob}{Pr}
+
 %% Randvar operations
-\newcommand{\E}{\mathbb{E}}
-\newcommand{\Var}{\text{Var}}
-\newcommand{\Cov}{\textrm{Cov}}
-\newcommand{\corr}{\textrm{corr}}
+\DeclareMathOperator{\E}{\ensuremath\mathbb{E}}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\corr}{corr}
 
 % \newcommand{\normalize}[3]{\frac{#1-#2}{#3}}
 
